@@ -1,0 +1,6 @@
+include ':microservices-magnus-larsson:api'
+include ':microservices-magnus-larsson:util'
+include ':microservices-magnus-larsson:product-service' 
+include ':microservices-magnus-larsson:review-service'
+include ':microservices-magnus-larsson:recommendation-service'
+include ':microservices-magnus-larsson:product-composite-service'
