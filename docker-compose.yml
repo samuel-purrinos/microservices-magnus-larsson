@@ -1,0 +1,28 @@
+version: '2.1'
+
+services:
+  product:
+    build: microservices-magnus-larsson/product-service
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  recommendation:
+    build: microservices-magnus-larsson/recommendation-service
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  review:
+    build: microservices-magnus-larsson/review-service
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  product-composite:
+    build: microservices-magnus-larsson/product-composite-service
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
